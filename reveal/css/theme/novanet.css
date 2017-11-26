@@ -1,8 +1,8 @@
 @font-face {
-    font-family:CenturyGothic;src:url('/CenturyGothic.otf')
+    font-family:CenturyGothic;src:url('/feature-toggles-presentation/CenturyGothic.otf')
 }
 @font-face {
-    font-family:CenturyGothic;font-weight:bold;src:url('/CenturyGothic-Bold.otf')
+    font-family:CenturyGothic;font-weight:bold;src:url('/feature-toggles-presentation/CenturyGothic-Bold.otf')
 }
 
 body {
