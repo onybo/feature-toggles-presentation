@@ -103,14 +103,6 @@ appsettings.json
 
 --
 
-## Release toggles
-Statisk konfigurasjon - appsettings.json
-
-## Andre toggles
-Konfigurasjonssystem
-
---
-
 ## Konfigurasjonssystem (Launchdarkly, Unleash, KV-store)
 
 <img src="images/unleash.png" alt="unleash" >
@@ -137,6 +129,14 @@ It depends <!-- .element: class="fragment current-visible" -->
 
 <img src="images/unleash.png" alt="unleash" width="400" style="margin-right: 40px;">
 <img src="images/minesweeper.gif" alt="feature branches" width="200"> 
+
+--
+
+## Release toggles
+Statisk konfigurasjon - appsettings.json
+
+## Andre toggles
+Konfigurasjonssystem
 
 ---
 
