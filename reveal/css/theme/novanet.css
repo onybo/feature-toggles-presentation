@@ -1,17 +1,10 @@
-@font-face {
-    font-family:CenturyGothic;src:url('/feature-toggles-presentation/CenturyGothic.otf')
-}
-@font-face {
-    font-family:CenturyGothic;font-weight:bold;src:url('/feature-toggles-presentation/CenturyGothic-Bold.otf')
-}
-
 body {
     background: #f8f8f8;
     background-color: #f8f8f8; }
     
 
 .reveal {
-    font-family: "CenturyGothic";
+    font-family: Lato, "Century Gothic";
     font-size: 42px;
     font-weight: normal;
     color: #222; }
@@ -41,7 +34,7 @@ body {
  .reveal h6 {
    margin: 0 0 20px 0;
    color: #222;
-   font-family: "CenturyGothic";
+   font-family: Lato, "Century Gothic";
    font-weight: 600;
    line-height: 1.2;
    letter-spacing: normal;
