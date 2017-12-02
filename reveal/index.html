@@ -52,130 +52,136 @@
 					</textarea>
 				</section>
 				<section>
-					<h2>Hva bruker vi dem til?</h2> 
-					
-					<ul>
-						<li>Release toggles </li>
-						<ul class="subitem"> <li >styre hva som inkluderes i en release</li> </ul>
-						<li>Experiment toggles</li>
-						<ul class="subitem"> <li >teste ut effekten av features</li> </ul>
-						<li>Ops toggles</li>
-						<ul class="subitem"> <li >black friday</li> </ul>
-						<ul class="subitem"> <li >gradvis utrulling</li> </ul>
-						<li>Permission toggles</li>
-						<ul class="subitem"> <li >styre tilgang features</li> </ul>
-					</ul>
-				</section>			
+					<section>
+						<h2>Hva bruker vi dem til?</h2> 
+						
+						<ul>
+							<li>Release toggles </li>
+							<ul class="subitem"> <li >styre hva som inkluderes i en release</li> </ul>
+							<li>Experiment toggles</li>
+							<ul class="subitem"> <li >teste ut effekten av features</li> </ul>
+							<li>Ops toggles</li>
+							<ul class="subitem"> <li >black friday</li> </ul>
+							<ul class="subitem"> <li >gradvis utrulling</li> </ul>
+							<li>Permission toggles</li>
+							<ul class="subitem"> <li >styre tilgang features</li> </ul>
+						</ul>
+					</section>			
+					<section>
+						<section>
+							<h4>Feature branches</h4>
+							<img src="images/feature-branch.png" alt="feature branches" >
+							
+							<aside class="notes">
+								<ul>
+									<li>Mye brukt</li>
+									<li>isolering</li>
+									<li>lang levetid</li>		
+									<li>merge konflikter</li>
+								</ul>
+							</aside>	
+						</section>
+						<section>
+							<h2>Trunk based development</h2>
+							<img src="images/trunk-based.png" alt="trunk based image" >
+
+							<aside class="notes">
+								<ul>
+									<li>Alt inn på main branch</li>
+									<li>Bedre synlighet kommunikasjon</li>
+									<li>Utestet kode deployes til produksjon</li>		
+									<li>Ikke aktiv før vi skrur på flagget</li>
+								</ul>
+							</aside>							
+						</section>
+					</section>
+				</section>
 				<section>
 					<section>
-						<h4>Feature branches/h4>
-						<img src="images/feature-branch.png" alt="feature branches" >
+						<h2>Konfigurasjon av toggles</h2>
+						<ul>
+							<li>Hardkoding</li>
+							<li>Command line</li>
+							<li>Konfigurasjonsfil</li> 
+							<li>Applikasjons Databasen</li>
+							<li>Konfigurasjonssystem (Launchdarkly, Unleash, Consul, Etcd, Zookeeper)</li>
+							<li>Overstyre konfigurasjon</li>
+						</ul>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							<h2>Hardkoding</h2>
+
+							```console
+							
+								const bool EnableFeatureA = true;
+							
+								if (EnableFeatureA)
+								{
+									//do it
+								} 
+							``` 	
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Command line
+							
+							```console
+								$ my_application.exe --enableFeatureA 
+							``` 																	
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Konfigurasjonsfil
+							appsettings.json
+							```json
+							{
+								"FeatureToggle": {
+									"FeatureA": "true",
+									"FeatureB": "false"
+								},
+							}
+							``` 																	
+						</textarea>
+					</section>									
+					<section data-markdown>
+						<textarea data-template>
+							## Konfigurasjonssystem (Launchdarkly, Unleash, KV-store)
+							
+							<img src="images/unleash.png" alt="unleash" >
+						</textarea>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Hva skal jeg bruke da?</h2>
+						<img src="https://media.giphy.com/media/3o7aTskHEUdgCQAXde/giphy.gif" alt="question" >
+						<p class="fragment current-visible">It depends</p>
+					</section>
+					<section>
+						<img src="images/feature-toggles.jpg" alt="feature toggles" >
 						
 						<aside class="notes">
 							<ul>
-								<li>Mye brukt</li>
-								<li>isolering</li>
-								<li>lang levetid</li>		
-								<li>merge konflikter</li>
-							</ul>
-						</aside>	
-					</section>
-					<section>
-						<h2>Trunk based development</h2>
-						<img src="images/trunk-based.png" alt="trunk based image" >
-
-						<aside class="notes">
-							<ul>
-								<li>Alt inn på main branch</li>
-								<li>Bedre synlighet kommunikasjon</li>
-								<li>Utestet kode deployes til produksjon</li>		
-								<li>Ikke aktiv før vi skrur på flagget</li>
+								<li>Uferdig kode som deployes til produksjon</li>
+								<li>Ikke testet</li>
+								<li>Må ikke aktiveres før den er godkjent</li>		
 							</ul>
 						</aside>							
 					</section>
-				</section>
-				<section>
-					<h2>Konfigurasjon av toggles</h2>
-					<ul>
-						<li>Hardkoding</li>
-						<li>Command line</li>
-						<li>Konfigurasjonsfil</li> 
-						<li>Applikasjons Databasen</li>
-						<li>Konfigurasjonssystem (Launchdarkly, Unleash, Consul, Etcd, Zookeeper)</li>
-						<li>Overstyre konfigurasjon</li>
-					</ul>
-				</section>
-				<section data-markdown>
-					<textarea data-template>
-						<h2>Hardkoding</h2>
-
-						```console
+					<section>
+						<img src="images/unleash.png" alt="unleash" width="400" style="margin-right: 40px;">
+						<img src="images/minesweeper.gif" alt="feature branches" width="200" class="fragment current-visible"> 						
+					</section>					
+					<section>
+						<h2>Release toggles</h2>
+						<p>Statisk konfigurasjon - appsettings.json</p>
 						
-							const bool EnableFeatureA = true;
-						
-							if (EnableFeatureA)
-							{
-								//do it
-							} 
-						``` 	
-					</textarea>
-				</section>
-				<section data-markdown>
-					<textarea data-template>
-						## Command line
-						
-						```console
-							$ my_application.exe --enableFeatureA 
-						``` 																	
-					</textarea>
-				</section>
-				<section data-markdown>
-					<textarea data-template>
-						## Konfigurasjonsfil
-						appsettings.json
-						```json
-						{
-							"FeatureToggle": {
-								"FeatureA": "true",
-								"FeatureB": "false"
-							},
-						}
-						``` 																	
-					</textarea>
-				</section>									
-				<section data-markdown>
-					<textarea data-template>
-						## Konfigurasjonssystem (Launchdarkly, Unleash, KV-store)
-						
-						<img src="images/unleash.png" alt="unleash" >
-					</textarea>
-				</section>
-				<section>
-					<h2>Hva skal jeg bruke da?</h2>
-					<img src="https://media.giphy.com/media/3o7aTskHEUdgCQAXde/giphy.gif" alt="question" >
-					<p class="fragment current-visible">It depends</p>
-				</section>
-				<section>
-					<img src="images/feature-toggles.jpg" alt="feature toggles" >
-					
-					<aside class="notes">
-						<ul>
-							<li>Uferdig kode som deployes til produksjon</li>
-							<li>Ikke testet</li>
-							<li>Må ikke aktiveres før den er godkjent</li>		
-						</ul>
-					</aside>							
-				</section>
-				<section>
-					<img src="images/unleash.png" alt="unleash" width="400" style="margin-right: 40px;">
-					<img src="images/minesweeper.gif" alt="feature branches" width="200" class="fragment current-visible"> 						
-				</section>					
-				<section>
-					<h2>Release toggles</h2>
-					<p>Statisk konfigurasjon - appsettings.json</p>
-					
-					<h2>Andre toggles</h2>
-					<p>Konfigurasjonssystem</p>
+						<h2>Andre toggles</h2>
+						<p>Konfigurasjonssystem</p>
+					</section>
 				</section>
 				<section>
 					<h2>Teknisk gjeld</h2>

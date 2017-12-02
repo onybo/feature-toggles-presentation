@@ -29,13 +29,13 @@
 			<div class="slides">
 				<section data-markdown>
 					<textarea data-template>
-					## Feature toggles
-					
-					Olav Nybø
+						## Feature toggles
+						
+						Olav Nybø
 					</textarea>
 				</section>						
 				<section data-markdown>
-						<textarea data-template>
+					<textarea data-template>
 						<h2>Hva er en feature toggle?</h2>
 						<br/>
 						
@@ -49,51 +49,54 @@
 							// Keep doing the old stuff
 						}
 						``` 
-						</textarea>
+					</textarea>
 				</section>
 				<section>
-					<h2>Hva bruker vi dem til?</h2> 
-					
-					<ul>
-						<li>Release toggles </li>
-						<ul class="subitem"> <li >styre hva som inkluderes i en release</li> </ul>
-						<li>Experiment toggles</li>
-						<ul class="subitem"> <li >teste ut effekten av features</li> </ul>
-						<li>Ops toggles</li>
-						<ul class="subitem"> <li >black friday</li> </ul>
-						<ul class="subitem"> <li >gradvis utrulling</li> </ul>
-						<li>Permission toggles</li>
-						<ul class="subitem"> <li >styre tilgang features</li> </ul>
-					</ul>
-				</section>			
-				<section>
 					<section>
-						<h4>Feature branches/h4>
-						<img src="images/feature-branch.png" alt="feature branches" >
+						<h2>Hva bruker vi dem til?</h2> 
 						
-						<aside class="notes">
-							<ul>
-								<li>Mye brukt</li>
-								<li>isolering</li>
-								<li>lang levetid</li>		
-								<li>merge konflikter</li>
-							</ul>
-						</aside>	
-					</section>
+						<ul>
+							<li>Release toggles </li>
+							<ul class="subitem"> <li >styre hva som inkluderes i en release</li> </ul>
+							<li>Experiment toggles</li>
+							<ul class="subitem"> <li >teste ut effekten av features</li> </ul>
+							<li>Ops toggles</li>
+							<ul class="subitem"> <li >black friday</li> </ul>
+							<ul class="subitem"> <li >gradvis utrulling</li> </ul>
+							<li>Permission toggles</li>
+							<ul class="subitem"> <li >styre tilgang features</li> </ul>
+						</ul>
+					</section>			
 					<section>
-						<h2>Trunk based development</h2>
-						<img src="images/trunk-based.png" alt="trunk based image" >
+						<section>
+							<h4>Feature branches</h4>
+							<img src="images/feature-branch.png" alt="feature branches" >
+							
+							<aside class="notes">
+								<ul>
+									<li>Mye brukt</li>
+									<li>isolering</li>
+									<li>lang levetid</li>		
+									<li>merge konflikter</li>
+								</ul>
+							</aside>	
+						</section>
+						<section>
+							<h2>Trunk based development</h2>
+							<img src="images/trunk-based.png" alt="trunk based image" >
 
-						<aside class="notes">
-							<ul>
-								<li>Alt inn på main branch</li>
-								<li>Bedre synlighet kommunikasjon</li>
-								<li>Utestet kode deployes til produksjon</li>		
-								<li>Ikke aktiv før vi skrur på flagget</li>
-							</ul>
-						</aside>														
+							<aside class="notes">
+								<ul>
+									<li>Alt inn på main branch</li>
+									<li>Bedre synlighet kommunikasjon</li>
+									<li>Utestet kode deployes til produksjon</li>		
+									<li>Ikke aktiv før vi skrur på flagget</li>
+								</ul>
+							</aside>							
+						</section>
 					</section>
 				</section>
+				<section>
 					<section>
 						<h2>Konfigurasjon av toggles</h2>
 						<ul>
@@ -150,6 +153,8 @@
 							<img src="images/unleash.png" alt="unleash" >
 						</textarea>
 					</section>
+				</section>
+				<section>
 					<section>
 						<h2>Hva skal jeg bruke da?</h2>
 						<img src="https://media.giphy.com/media/3o7aTskHEUdgCQAXde/giphy.gif" alt="question" >
@@ -169,7 +174,7 @@
 					<section>
 						<img src="images/unleash.png" alt="unleash" width="400" style="margin-right: 40px;">
 						<img src="images/minesweeper.gif" alt="feature branches" width="200" class="fragment current-visible"> 						
-					</section>
+					</section>					
 					<section>
 						<h2>Release toggles</h2>
 						<p>Statisk konfigurasjon - appsettings.json</p>
@@ -177,6 +182,7 @@
 						<h2>Andre toggles</h2>
 						<p>Konfigurasjonssystem</p>
 					</section>
+				</section>
 				<section>
 					<h2>Teknisk gjeld</h2>
 					<img src="https://media.giphy.com/media/GVQ7PkscQwk3S/giphy.gif" alt="teknisk gjeld"> 
