@@ -68,15 +68,32 @@
 				</section>			
 				<section>
 					<section>
-						<h4>Release toggles - Trunk based development Vs Feature branching</h4>
-						<img src="images/feature-branch.png" alt="feature branches" >		
+						<h4>Feature branches/h4>
+						<img src="images/feature-branch.png" alt="feature branches" >
+						
+						<aside class="notes">
+							<ul>
+								<li>Mye brukt</li>
+								<li>isolering</li>
+								<li>lang levetid</li>		
+								<li>merge konflikter</li>
+							</ul>
+						</aside>	
 					</section>
 					<section>
 						<h2>Trunk based development</h2>
 						<img src="images/trunk-based.png" alt="trunk based image" >
+
+						<aside class="notes">
+							<ul>
+								<li>Alt inn på main branch</li>
+								<li>Bedre synlighet kommunikasjon</li>
+								<li>Utestet kode deployes til produksjon</li>		
+								<li>Ikke aktiv før vi skrur på flagget</li>
+							</ul>
+						</aside>														
 					</section>
 				</section>
-				<section>
 					<section>
 						<h2>Konfigurasjon av toggles</h2>
 						<ul>
@@ -142,10 +159,16 @@
 						<img src="images/feature-toggles.jpg" alt="feature toggles" >
 						
 						<aside class="notes">
-							- Uferdig kode som deployes til produksjon
-							- Ikke testet
-							- Må ikke aktiveres før den er godkjent
+							<ul>
+								<li>Uferdig kode som deployes til produksjon</li>
+								<li>Ikke testet</li>
+								<li>Må ikke aktiveres før den er godkjent</li>		
+							</ul>
 						</aside>							
+					</section>
+					<section>
+						<img src="images/unleash.png" alt="unleash" width="400" style="margin-right: 40px;">
+						<img src="images/minesweeper.gif" alt="feature branches" width="200" class="fragment current-visible"> 						
 					</section>
 					<section>
 						<h2>Release toggles</h2>
@@ -154,7 +177,6 @@
 						<h2>Andre toggles</h2>
 						<p>Konfigurasjonssystem</p>
 					</section>
-				</section>
 				<section>
 					<h2>Teknisk gjeld</h2>
 					<img src="https://media.giphy.com/media/GVQ7PkscQwk3S/giphy.gif" alt="teknisk gjeld"> 
@@ -162,16 +184,7 @@
 					Rydding av gamle toggles blir en kontinuerlig prosess
 				</section>
 				<section>
-					<h2>Bruk med måte</h2>
-					<div style="font-size: 40%;"> 
-						<span>FeatureA(on/off)</span>
-						<span style="font-weight: bold;"> X </span>
-						<span>FeatureB(on/off)</span>
-						<span style="font-weight: bold;"> X </span>
-						<span>FeatureC(on/off)</span>
-						<span style="font-weight: bold;"> X </span>
-						<span>FeatureD(on/off) ..... </span>
-					</div>							
+					<h2>Bruk med måte - X<sup>2</sup></h2>
 					<img src="images/exponential.png" alt="exponential growth" height="400">													
 				</section>
 				<section>
