@@ -66,18 +66,23 @@
 							<li>Permission toggles</li>
 							<ul class="subitem"> <li >styre tilgang features</li> </ul>
 						</ul>
+
+						<aside class="notes">
+							<p>RT - hva er klart for testing, eller produksjon. I hvert miljø styre når en feature skal være aktiv</p>
+							<p>Utføre eksperimenter i prod. F.eks. ab testing der vi tester hva som fungerer best. Blå eller rød knapp</p>
+							<p>Gi drift avdelingen verktøy for å ta grep. Skru av ikke essentielle features for å hjelpe et system som sliter under tung last</p>
+							<p>Gi grupper av brukerene tilgang til en feature. Forskjellige features i forskjellige land eller avhengig av abonnmentsnivå</p>							
+						</aside>
 					</section>			
 					<section>
 						<h4>Feature branches</h4>
 						<img src="images/feature-branch.png" alt="feature branches" >
 						
 						<aside class="notes">
-							<ul>
-								<li>Mye brukt</li>
-								<li>isolering</li>
-								<li>lang levetid</li>		
-								<li>merge konflikter</li>
-							</ul>
+							<p>Mange team bruker feature branching for at utviklerene skal kunne jobbe med hver sin feature i isolasjon</p>
+							<p>Men det begrenser kommunikasjon i teamet. Utvikler av B og C ser ikke endringene til A</p>
+							<p>Merge conflict</p>
+							<p>Vi kan unngå det med kort levetid på branchene, men det blir lett ikke sånn i praksis</p>
 						</aside>	
 					</section>
 					<section>
@@ -85,12 +90,10 @@
 						<img src="images/trunk-based.png" alt="trunk based image" >
 
 						<aside class="notes">
-							<ul>
-								<li>Alt inn på main branch</li>
-								<li>Bedre synlighet kommunikasjon</li>
-								<li>Utestet kode deployes til produksjon</li>		
-								<li>Ikke aktiv før vi skrur på flagget</li>
-							</ul>
+							<p>Alt inn på main branch</p>
+							<p>Bedre synlighet kommunikasjon</p>
+							<p>Utestet kode deployes til produksjon</p>		
+							<p>Ikke aktiv før vi skrur på flagget</p>
 						</aside>							
 					</section>
 				</section>				
@@ -105,6 +108,11 @@
 							<li>Konfigurasjonssystem (Launchdarkly, Unleash, Consul, Etcd, Zookeeper)</li>
 							<li>Overstyre konfigurasjon</li>
 						</ul>
+						<aside class="notes">
+							<p>Forskjellige måter å konfigurere om toggles er av eller på</p>
+							<p>Økende grad av dynamikk</p>
+						</aside>							
+							
 					</section>
 					<section data-markdown>
 						<textarea data-template>
